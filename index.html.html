@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engepecas · Atacado de Peças Automotivas</title>
+    <!-- Bootstrap 5 + ícones -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --enge-blue: #0a2e5c;
+            --enge-gold: #d4a843;
+            --enge-light: #f8f9fa;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fcfcfc;
+        }
+        .bg-enge-blue { background-color: var(--enge-blue); }
+        .text-enge-gold { color: var(--enge-gold); }
+        .border-enge-gold { border-color: var(--enge-gold); }
+        .btn-outline-enge {
+            color: var(--enge-blue);
+            border-color: var(--enge-blue);
+        }
+        .btn-outline-enge:hover {
+            background-color: var(--enge-blue);
+            color: #fff;
+            border-color: var(--enge-blue);
+        }
+        .btn-enge-gold {
+            background-color: var(--enge-gold);
+            color: #0a2e5c;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-enge-gold:hover {
+            background-color: #c49a3a;
+            color: #0a2e5c;
+        }
+        .section-title {
+            border-left: 6px solid var(--enge-gold);
+            padding-left: 1rem;
+            font-weight: 600;
+            color: var(--enge-blue);
+        }
+        .card-shadow {
+            box-shadow: 0 8px 24px rgba(10, 46, 92, 0.06);
+            transition: transform 0.2s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-4px);
+        }
+        .icon-lg {
+            font-size: 2.8rem;
+            color: var(--enge-gold);
+        }
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .bg-enge-soft {
+            background-color: #eef3f9;
+        }
+        .list-dot-gold li::marker {
+            color: var(--enge-gold);
+        }
+        .badge-ie {
+            background-color: rgba(212, 168, 67, 0.15);
+            color: #0a2e5c;
+            border: 1px solid rgba(212, 168, 67, 0.3);
+            font-weight: 500;
+        }
+        .info-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(10, 46, 92, 0.04);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+        }
+        .map-placeholder {
+            background: #d9e2ec;
+            border-radius: 12px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a2e5c;
+            font-weight: 500;
+        }
+        @media (max-width: 576px) {
+            .hero-text {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-enge-blue" data-bs-theme="dark">
+    <div class="container py-1">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <i class="bi bi-car-front-fill me-2 text-enge-gold"></i>
+            <span>Engepecas</span>
+            <small class="ms-2 fw-light text-enge-gold d-none d-sm-inline">· atacado</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#dados">Dados</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="#politica">Privacidade</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO / HOME -->
+<section id="home" class="py-5 bg-enge-soft">
+    <div class="container py-3">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold hero-text" style="color: var(--enge-blue);">
+                    <span class="text-enge-gold">Peças</span> e acessórios<br>para toda frota
+                </h1>
+                <p class="lead fs-5 mt-3 text-secondary">
+                    Comércio por atacado de peças e acessórios novos para veículos automotores. 
+                    <span class="fw-semibold" style="color: var(--enge-blue);">Engepecas</span> – qualidade e confiança há mais de 24 anos.
+                </p>
+                <div class="mt-4 d-flex flex-wrap gap-3">
+                    <a href="#contato" class="btn btn-enge-gold px-5 py-2">Fale conosco <i class="bi bi-whatsapp ms-2"></i></a>
+                    <a href="#dados" class="btn btn-outline-enge px-5 py-2">Conheça a empresa</a>
+                </div>
+                <div class="mt-4 d-flex gap-4 flex-wrap">
+                    <span><i class="bi bi-truck text-enge-gold me-1"></i> Atacado nacional</span>
+                    <span><i class="bi bi-shield-check text-enge-gold me-1"></i> Certificações</span>
+                    <span><i class="bi bi-clock-history text-enge-gold me-1"></i> +24 anos</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4 bg-white rounded-4 shadow-sm border border-enge-gold border-opacity-25 text-center">
+                    <i class="bi bi-building icon-lg d-block"></i>
+                    <h3 class="mt-2" style="color: var(--enge-blue);">Engepecas Equipamentos Ltda.</h3>
+                    <p class="text-secondary mb-0"><i class="bi bi-geo-alt-fill text-enge-gold"></i> São José dos Pinhais – PR</p>
+                    <div class="mt-3 d-flex justify-content-center gap-4 flex-wrap">
+                        <span class="badge-ie badge p-2"><i class="bi bi-cnpj me-1"></i> 05.063.653/0001-33</span>
+                        <span class="badge-ie badge p-2"><i class="bi bi-calendar3 me-1"></i> desde 2002</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE / TRABALHO -->
+<section id="sobre" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h2 class="section-title mb-4">Atuação & <span class="text-enge-gold">compromisso</span></h2>
+                <p style="color: #1f2a3f;">Atuamos no <strong>comércio atacadista de peças e acessórios novos para veículos automotores</strong>, fornecendo soluções para toda a cadeia automotiva. Nossa estrutura atende desde pequenas oficinas até grandes montadoras, com logística ágil e estoque diversificado.</p>
+                <ul class="list-unstyled mt-4 list-dot-gold">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-enge-gold me-2"></i> Peças originais e certificadas</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-enge-gold me-2"></i> Atendimento personalizado para atacado</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-enge-gold me-2"></i> Entrega em todo o território nacional</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-enge-gold me-2"></i> Parceria com as principais montadoras</li>
+                </ul>
+                <p class="mt-3 fst-italic text-secondary">"Qualidade e confiabilidade são os pilares da Engepecas."</p>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="info-box text-center h-100">
+                            <i class="bi bi-award icon-lg"></i>
+                            <h5 class="mt-2" style="color: var(--enge-blue);">24 anos</h5>
+                            <p class="small text-secondary">de experiência no setor</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="info-box text-center h-100">
+                            <i class="bi bi-people icon-lg"></i>
+                            <h5 class="mt-2" style="color: var(--enge-blue);">Equipe qualificada</h5>
+                            <p class="small text-secondary">especialistas em autopeças</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="info-box">
+                            <i class="bi bi-geo-alt-fill text-enge-gold me-2"></i>
+                            <span class="fw-semibold">Matriz:</span> Rua Jose Semes, 17680 – Brcao 1, Italia, São José dos Pinhais – PR
+                            <span class="badge bg-enge-blue text-white ms-2">CEP 83020-442</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DADOS CADASTRAIS -->
+<section id="dados" class="py-5 bg-enge-soft">
+    <div class="container">
+        <h2 class="section-title mb-4">Informações <span class="text-enge-gold">institucionais</span></h2>
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="card card-shadow border-0 h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex flex-wrap gap-3 mb-3">
+                            <span class="badge-ie badge p-2"><i class="bi bi-building me-1"></i> Matriz</span>
+                            <span class="badge-ie badge p-2"><i class="bi bi-check-circle-fill text-success me-1"></i> Situação: Ativa</span>
+                            <span class="badge-ie badge p-2"><i class="bi bi-calendar-event me-1"></i> 03/11/2005</span>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-cnpj me-2 text-enge-gold"></i>CNPJ</span> <span class="fw-semibold">05.063.653/0001-33</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-tag me-2 text-enge-gold"></i>Razão Social</span> <span class="fw-semibold">Engepecas Equipamentos Ltda.</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-pencil-square me-2 text-enge-gold"></i>Nome Fantasia</span> <span class="fw-semibold">Engepecas</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-cash-stack me-2 text-enge-gold"></i>Capital Social</span> <span class="fw-semibold">R$ 39.926.650,00</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-calendar2-week me-2 text-enge-gold"></i>Abertura</span> <span class="fw-semibold">24/05/2002 (24 anos, 3 meses)</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-file-earmark-text me-2 text-enge-gold"></i>Natureza Jurídica</span> <span class="fw-semibold">Sociedade Empresária Limitada</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card card-shadow border-0 h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold" style="color: var(--enge-blue);"><i class="bi bi-clipboard-data text-enge-gold me-2"></i>Inscrições Estaduais</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge-ie badge p-2">PR: 90452173-69</span>
+                            <span class="badge-ie badge p-2">PR: 90257623-10</span>
+                            <span class="badge-ie badge p-2">MG: 001274747.00-40</span>
+                            <span class="badge-ie badge p-2">PE: 0437574-21</span>
+                            <span class="badge-ie badge p-2">RS: 096/3229397</span>
+                            <span class="badge-ie badge p-2">RS: 900/0003984</span>
+                            <span class="badge-ie badge p-2">SP: 816.003.242.119</span>
+                        </div>
+                        <hr>
+                        <p class="mb-1"><i class="bi bi-envelope text-enge-gold me-2"></i>E-mail: <span class="text-secondary">fi****@****.com.br</span> <small class="text-muted">(Ver e-mail)</small></p>
+                        <p><i class="bi bi-telephone text-enge-gold me-2"></i>Telefone: <span class="text-secondary">(41) 338****-****</span> <small class="text-muted">(Ver telefone)</small></p>
+                        <div class="mt-3 alert alert-light border-0 p-3" style="background: #e7edf6;">
+                            <i class="bi bi-info-circle-fill text-enge-gold me-2"></i>
+                            <span class="small">Opção MEI: <strong>Não</strong> · Simples: <strong>Não</strong> · Porte: Sem enquadramento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOCALIZAÇÃO + CONTATO RÁPIDO -->
+<section id="contato" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h2 class="section-title mb-3"><i class="bi bi-geo-alt text-enge-gold me-2"></i>Onde estamos</h2>
+                <div class="map-placeholder mb-3">
+                    <i class="bi bi-map-fill me-2" style="font-size: 2rem;"></i> Rua Jose Semes, 17680 – Brcao 1
+                </div>
+                <div class="info-box">
+                    <p class="mb-1"><i class="bi bi-building me-2 text-enge-gold"></i><strong>Engepecas Equipamentos Ltda.</strong></p>
+                    <p class="mb-1"><i class="bi bi-pin-map me-2 text-enge-gold"></i>Rua Jose Semes, 17680 – Brcao 1, Italia</p>
+                    <p class="mb-1"><i class="bi bi-geo-alt me-2 text-enge-gold"></i>83020-442 – São José dos Pinhais – PR</p>
+                    <p><i class="bi bi-envelope me-2 text-enge-gold"></i>fi****@****.com.br · (41) 338****-****</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="section-title mb-3"><i class="bi bi-chat-dots text-enge-gold me-2"></i>Fale com a Engepecas</h2>
+                <div class="card card-shadow border-0">
+                    <div class="card-body p-4">
+                        <p class="text-secondary">Entre em contato para cotações, parcerias ou informações sobre nosso estoque.</p>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="#" class="btn btn-outline-enge text-start"><i class="bi bi-whatsapp me-2 text-enge-gold"></i> (41) 9****-****</a>
+                            <a href="#" class="btn btn-outline-enge text-start"><i class="bi bi-envelope me-2 text-enge-gold"></i> enviar e-mail</a>
+                            <a href="#" class="btn btn-enge-gold text-start"><i class="bi bi-telephone me-2"></i> Ligar agora</a>
+                        </div>
+                        <p class="small text-muted mt-3">* Atendimento comercial de segunda a sexta, 8h às 18h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- POLÍTICA DE PRIVACIDADE -->
+<section id="politica" class="py-5 bg-enge-soft">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 card-shadow">
+                    <div class="card-body p-4 p-lg-5">
+                        <h3 class="section-title mb-3"><i class="bi bi-shield-lock text-enge-gold me-2"></i>Política de Privacidade</h3>
+                        <p class="text-secondary">A Engepecas Equipamentos Ltda. respeita sua privacidade e se compromete a proteger seus dados. Esta política descreve como coletamos, usamos e armazenamos informações.</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <h6><i class="bi bi-database me-2 text-enge-gold"></i> Coleta de dados</h6>
+                                <p class="small text-secondary">Coletamos informações fornecidas voluntariamente, como nome, e-mail e telefone, para atendimento e comunicação comercial.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><i class="bi bi-eye me-2 text-enge-gold"></i> Uso das informações</h6>
+                                <p class="small text-secondary">Os dados são utilizados para processar pedidos, enviar atualizações e melhorar nossos serviços. Não compartilhamos com terceiros sem consentimento.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><i class="bi bi-clock me-2 text-enge-gold"></i> Retenção</h6>
+                                <p class="small text-secondary">Mantemos seus dados pelo tempo necessário para cumprir obrigações legais e fiscais, ou até que você solicite a exclusão.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><i class="bi bi-person-lock me-2 text-enge-gold"></i> Seus direitos</h6>
+                                <p class="small text-secondary">Você pode acessar, corrigir ou solicitar a exclusão de seus dados pessoais a qualquer momento, entrando em contato conosco.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="text-secondary small">Esta política é regida pelas leis brasileiras e está em conformidade com a LGPD. Para dúvidas, utilize nossos canais de contato.</p>
+                        <p class="text-muted small mb-0"><i class="bi bi-calendar3 me-1"></i> Última atualização: maio de 2026 · Engepecas Equipamentos Ltda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-enge-blue text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="text-enge-gold"><i class="bi bi-car-front-fill me-2"></i>Engepecas</h5>
+                <p class="small text-white-50">Comércio por atacado de peças e acessórios novos para veículos automotores. Compromisso com a qualidade desde 2002.</p>
+            </div>
+            <div class="col-md-4">
+                <h6 class="text-enge-gold">Contato</h6>
+                <ul class="list-unstyled small">
+                    <li><i class="bi bi-geo-alt me-1"></i> Rua Jose Semes, 17680 – Brcao 1</li>
+                    <li><i class="bi bi-pin me-1"></i> São José dos Pinhais – PR, 83020-442</li>
+                    <li><i class="bi bi-envelope me-1"></i> fi****@****.com.br</li>
+                    <li><i class="bi bi-telephone me-1"></i> (41) 338****-****</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 class="text-enge-gold">Links rápidos</h6>
+                <div class="d-flex flex-column">
+                    <a href="#home" class="footer-link small">Início</a>
+                    <a href="#sobre" class="footer-link small">Sobre</a>
+                    <a href="#dados" class="footer-link small">Dados cadastrais</a>
+                    <a href="#politica" class="footer-link small">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-light opacity-25">
+        <div class="text-center small text-white-50">
+            &copy; 2026 Engepecas Equipamentos Ltda. · CNPJ: 05.063.653/0001-33 · Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (opcional para toggles) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
